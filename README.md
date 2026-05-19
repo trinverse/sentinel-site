@@ -29,6 +29,6 @@ Pages settings (one-time): Settings → Pages → Source: "Deploy from a branch"
 
 All copy lives in the component files under `src/components/`. There is no CMS or content collection. The page composition order is in `src/pages/index.astro`.
 
-## License
+## About
 
-Source for the marketing site is released as-is for reference; the Sentinel product itself is hosted at <https://github.com/ashishtyagi10/sentinel>.
+This is the marketing site only. Sentinel itself is a private product at <https://sntl.live>.
