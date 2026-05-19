@@ -1,0 +1,31 @@
+---
+import IconPower from './icons/IconPower.astro';
+import IconTower from './icons/IconTower.astro';
+import IconPipe from './icons/IconPipe.astro';
+import IconSun from './icons/IconSun.astro';
+
+const cases = [
+  { Icon: IconPower, title: 'Power transmission', body: 'Detect cracks, corrosion, and vegetation encroachment along high-voltage corridors.' },
+  { Icon: IconTower, title: 'Telecom towers', body: 'Inspect antennas, mounts, and structural integrity without sending climbers.' },
+  { Icon: IconPipe, title: 'Pipelines', body: 'Survey rights-of-way and detect leaks, encroachment, and exposed sections.' },
+  { Icon: IconSun, title: 'Solar farms', body: 'Thermal-scan PV arrays at scale to find hot spots, cracks, and dead cells.' },
+];
+---
+<section id="use-cases" class="border-t border-[color:var(--color-border)] py-24">
+  <div class="max-w-6xl mx-auto px-6">
+    <header class="max-w-2xl">
+      <p class="text-sm font-mono uppercase tracking-widest text-cyan-400">Use cases</p>
+      <h2 class="mt-3 text-3xl sm:text-4xl font-semibold">One platform. Many assets.</h2>
+    </header>
+
+    <ul class="mt-12 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
+      {cases.map(({ Icon, title, body }) => (
+        <li class="rounded-lg border border-slate-800 p-6 hover:border-cyan-900 transition-colors">
+          <Icon class="w-7 h-7 text-cyan-400" />
+          <h3 class="mt-4 text-lg font-semibold text-slate-100">{title}</h3>
+          <p class="mt-2 text-sm text-slate-400 leading-relaxed">{body}</p>
+        </li>
+      ))}
+    </ul>
+  </div>
+</section>
