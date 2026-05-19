@@ -1,0 +1,59 @@
+---
+import IconAI from './icons/IconAI.astro';
+import IconCube from './icons/IconCube.astro';
+import IconLayers from './icons/IconLayers.astro';
+import IconShield from './icons/IconShield.astro';
+import IconClipboard from './icons/IconClipboard.astro';
+import IconUsers from './icons/IconUsers.astro';
+
+const features = [
+  {
+    Icon: IconAI,
+    title: 'AI-powered defect detection',
+    body: 'YOLO26 visual and thermal models auto-annotate captured imagery; pilots review drafts instead of starting from scratch.',
+  },
+  {
+    Icon: IconCube,
+    title: '3D photogrammetry & orthophotos',
+    body: 'Drop in photos, get an orthophoto, point cloud, and textured 3D model via the built-in NodeODM pipeline.',
+  },
+  {
+    Icon: IconLayers,
+    title: 'GIS layers & LIDAR analysis',
+    body: 'PostGIS-backed corridor analysis, elevation profiles, and a Three.js point-cloud viewer in the browser.',
+  },
+  {
+    Icon: IconShield,
+    title: 'No-fly zone safety',
+    body: 'FAA and AirMap airspace sync, polygon overlays, and waypoint validation before every flight.',
+  },
+  {
+    Icon: IconClipboard,
+    title: 'Work-order automation',
+    body: 'AI findings spawn work orders that auto-assign to specialist or regional teams with SLA tracking.',
+  },
+  {
+    Icon: IconUsers,
+    title: 'Multi-tenant teams',
+    body: 'Accounts, projects, and roles — built for organizations running their own crews or coordinating contractors.',
+  },
+];
+---
+<section id="features" class="border-t border-[color:var(--color-border)] py-24">
+  <div class="max-w-6xl mx-auto px-6">
+    <header class="max-w-2xl">
+      <p class="text-sm font-mono uppercase tracking-widest text-cyan-400">Features</p>
+      <h2 class="mt-3 text-3xl sm:text-4xl font-semibold">Everything an inspection program needs.</h2>
+    </header>
+
+    <ul class="mt-12 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
+      {features.map(({ Icon, title, body }) => (
+        <li class="rounded-lg border border-slate-800 bg-[color:var(--color-bg-elevated)] p-6 hover:border-cyan-900 transition-colors">
+          <Icon class="w-7 h-7 text-cyan-400" />
+          <h3 class="mt-4 text-lg font-semibold text-slate-100">{title}</h3>
+          <p class="mt-2 text-sm text-slate-400 leading-relaxed">{body}</p>
+        </li>
+      ))}
+    </ul>
+  </div>
+</section>
