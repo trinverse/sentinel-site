@@ -1,0 +1,20 @@
+---
+interface Props { class?: string; label?: string; }
+const { class: cls = 'w-6 h-6', label } = Astro.props;
+---
+<svg
+  xmlns="http://www.w3.org/2000/svg"
+  viewBox="0 0 24 24"
+  fill="none"
+  stroke="currentColor"
+  stroke-width="1.5"
+  stroke-linecap="round"
+  stroke-linejoin="round"
+  class={cls}
+  aria-label={label}
+  aria-hidden={label ? undefined : 'true'}
+  role={label ? 'img' : undefined}
+>
+  <path d="M12 3 4 6v6c0 5 3.5 8.5 8 9 4.5-.5 8-4 8-9V6z" />
+  <path d="m9 12 2 2 4-4" />
+</svg>
