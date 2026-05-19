@@ -1,0 +1,42 @@
+@import "tailwindcss";
+
+@theme {
+  --color-bg: #0a0c10;
+  --color-bg-elevated: #11141a;
+  --color-border: #1f2937;
+  --color-accent: #22d3ee;
+  --color-accent-dim: #0e7490;
+  --color-text: #e5e7eb;
+  --color-text-dim: #94a3b8;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  background: var(--color-bg);
+  color: var(--color-text);
+  font-family: ui-sans-serif, system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif;
+  -webkit-font-smoothing: antialiased;
+}
+
+code, pre, .mono {
+  font-family: ui-monospace, SFMono-Regular, "SF Mono", Menlo, Consolas, "Liberation Mono", monospace;
+}
+
+/* Hero radial + grid backdrop */
+.hero-backdrop {
+  background:
+    radial-gradient(ellipse at top, rgba(34, 211, 238, 0.10), transparent 60%),
+    repeating-linear-gradient(0deg, transparent, transparent 39px, rgba(148, 163, 184, 0.05) 40px),
+    repeating-linear-gradient(90deg, transparent, transparent 39px, rgba(148, 163, 184, 0.05) 40px),
+    var(--color-bg);
+}
+
+/* Focus ring */
+:focus-visible {
+  outline: 2px solid var(--color-accent);
+  outline-offset: 2px;
+  border-radius: 2px;
+}
