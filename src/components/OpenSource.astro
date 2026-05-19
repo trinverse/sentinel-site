@@ -1,0 +1,27 @@
+---
+import IconGitHub from './icons/IconGitHub.astro';
+---
+<section id="open-source" class="border-t border-[color:var(--color-border)] py-24 bg-[color:var(--color-bg-elevated)]/40">
+  <div class="max-w-3xl mx-auto px-6 text-center">
+    <p class="text-sm font-mono uppercase tracking-widest text-cyan-400">Open source</p>
+    <h2 class="mt-3 text-3xl sm:text-4xl font-semibold">Built in the open.</h2>
+    <p class="mt-4 text-slate-400 leading-relaxed">
+      Sentinel's source is on GitHub — backend, frontend, drone integration, AI pipelines, deployment scripts. Read the code, file issues, send a PR, or fork it for your own program.
+    </p>
+    <div class="mt-8 flex flex-wrap items-center justify-center gap-4">
+      <a
+        href="https://github.com/ashishtyagi10/sentinel"
+        class="inline-flex items-center gap-2 px-6 py-3 rounded-md bg-cyan-500 text-slate-950 font-medium hover:bg-cyan-400 transition-colors"
+      >
+        <IconGitHub class="w-4 h-4" />
+        github.com/ashishtyagi10/sentinel
+      </a>
+      <a
+        href="https://sntl.live"
+        class="inline-flex items-center gap-2 px-6 py-3 text-slate-300 hover:text-cyan-300 transition-colors"
+      >
+        Or try the product →
+      </a>
+    </div>
+  </div>
+</section>
