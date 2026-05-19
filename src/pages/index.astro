@@ -1,9 +1,13 @@
 ---
 import BaseLayout from '../layouts/BaseLayout.astro';
+import Nav from '../components/Nav.astro';
 ---
 <BaseLayout>
-  <main class="max-w-6xl mx-auto px-6 py-24">
-    <h1 class="text-4xl font-semibold text-cyan-400">Sentinel</h1>
-    <p class="mt-4 text-slate-300">Layout wired. Sections coming next.</p>
+  <Nav />
+  <main id="top">
+    <section class="max-w-6xl mx-auto px-6 py-24">
+      <h1 class="text-3xl font-semibold">Nav wired</h1>
+      <p class="mt-2 text-slate-400">Scroll, resize to mobile, and click the burger to verify.</p>
+    </section>
   </main>
 </BaseLayout>

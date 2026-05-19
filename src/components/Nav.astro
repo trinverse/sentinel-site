@@ -1,0 +1,38 @@
+---
+const links = [
+  { href: '#features', label: 'Features' },
+  { href: '#how-it-works', label: 'How it works' },
+  { href: '#use-cases', label: 'Use cases' },
+  { href: '#open-source', label: 'GitHub' },
+];
+---
+<header class="sticky top-0 z-50 backdrop-blur-md bg-[color:var(--color-bg)]/80 border-b border-[color:var(--color-border)]">
+  <nav class="max-w-6xl mx-auto px-6 h-14 flex items-center justify-between">
+    <a href="#top" class="flex items-center gap-2 text-cyan-400 font-semibold tracking-tight">
+      <svg viewBox="0 0 32 32" class="w-6 h-6" aria-hidden="true">
+        <path d="M16 6 L24 12 L24 22 L16 26 L8 22 L8 12 Z" fill="none" stroke="currentColor" stroke-width="2" stroke-linejoin="round"/>
+        <circle cx="16" cy="16" r="3" fill="currentColor"/>
+      </svg>
+      <span>Sentinel</span>
+    </a>
+
+    <ul class="hidden md:flex items-center gap-8 text-sm text-slate-300">
+      {links.map(({ href, label }) => (
+        <li><a href={href} class="hover:text-cyan-400 transition-colors">{label}</a></li>
+      ))}
+    </ul>
+
+    <details class="md:hidden relative">
+      <summary class="list-none cursor-pointer p-2 -mr-2 text-slate-300" aria-label="Open navigation menu">
+        <svg viewBox="0 0 24 24" class="w-6 h-6" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round">
+          <path d="M4 6h16M4 12h16M4 18h16"/>
+        </svg>
+      </summary>
+      <ul class="absolute right-0 top-full mt-2 w-48 rounded-md border border-[color:var(--color-border)] bg-[color:var(--color-bg-elevated)] p-2 text-sm text-slate-300">
+        {links.map(({ href, label }) => (
+          <li><a href={href} class="block px-3 py-2 rounded hover:bg-cyan-900/30 hover:text-cyan-300">{label}</a></li>
+        ))}
+      </ul>
+    </details>
+  </nav>
+</header>
