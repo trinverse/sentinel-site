@@ -8,7 +8,7 @@ Marketing site for [Sentinel](https://sntl.live) — AI-driven drone inspection 
 
 - [Astro 5](https://astro.build) — static site, zero JS by default
 - [Tailwind CSS 4](https://tailwindcss.com) via `@tailwindcss/vite`
-- TypeScript, pnpm 9, Node 20
+- TypeScript, pnpm 11, Node 20
 
 ## Local development
 
